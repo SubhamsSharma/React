@@ -1,10 +1,13 @@
-import "./styles.css";
+import React from "react";
+import { BackgroundContext } from "./BackgroundContext";
+
+import Home from "./Home";
 
 export default function App() {
   return (
-    <div className="App">
-      <h1>Hello CodeSandbox</h1>
-      <h2>Start editing to see some magic happen!</h2>
-    </div>
+    <BackgroundContext.Provider value="red">
+      {console.log(BackgroundContext)}
+      <Home />
+    </BackgroundContext.Provider>
   );
 }
